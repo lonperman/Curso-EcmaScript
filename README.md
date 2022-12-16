@@ -1,5 +1,5 @@
 ## 1️⃣ Scope (Alcance de una variable)
-   ### Las formas de definir una variable en JavaScript como lo son var, let y const, tienen presente un respectivo alcance por lo cual se debe tener presente al momento de ser definidas en el desarrollo de un proyecto.
+   > Las formas de definir una variable en JavaScript como lo son var, let y const, tienen presente un respectivo alcance por lo cual se debe tener presente al momento de ser definidas en el desarrollo de un proyecto.
 
 
 ```
@@ -24,7 +24,7 @@ const fruits = () => {
 ```
 
 ## 2️⃣ Arrow Functions (Funciones Flecha)
-   ### En la version de ecmaScript 6 contamos con las funciones flecha en donde se agrega una nueva forma de definir una funcion ademas de la forma convencional de como se definen dentro del desarrollo de un proyecto.
+> En la version de ecmaScript 6 contamos con las funciones flecha en donde se agrega una nueva forma de definir una funcion ademas de la forma convencional de como se definen dentro del desarrollo de un proyecto.
 
 ```
 // Forma normal de definir una funcion.
@@ -55,7 +55,7 @@ const square = num => num*num;
 ✅ ---> Result: 9
 ```
 ## 3️⃣ Template Literals (Uso de strings y variables)
-  ### Los templates literals se utilizan para plasmar textos de una manera más dinamica, ya que este nos permite utilizar string y variables dentro de un mismo texto o parrafo dandonos la opcion de cambiar ciertos elementos y ahorrandonos en si, el volver escribir el mismo texto y tener que cambiar ciertas palabras.
+  > Los templates literals se utilizan para plasmar textos de una manera más dinamica, ya que este nos permite utilizar string y variables dentro de un mismo texto o parrafo dandonos la opcion de cambiar ciertos elementos y ahorrandonos en si, el volver escribir el mismo texto y tener que cambiar ciertas palabras.
 
 ```
 let hello = 'Hello';
@@ -73,7 +73,7 @@ let epicPhrase2 = `${hello} ${world}`;
 ✅ ---> Result: Hello World
 ```
 
-### Los temple literals nos pueden ahorrar el tener que estar indicandole donde realizar un salto de linea.
+> Los temple literals nos pueden ahorrar el tener que estar indicandole donde realizar un salto de linea.
 
 ```
 // Multi-line strings
@@ -94,7 +94,7 @@ let lorem2 = `Esta es una frase epica
 ```
 
 ## 4️⃣ Default-params. (Definicion de parametros con valor por defecto)
-### Aveces cuando estamos desarrollando un  programa definimos cierta cantidad de parametros los cuales debemos enviarle a una funcion al momento de querer operarla, pero en ocaciones otro desarrollador puede pasar por desapercibido alguno de los argumentos, y esto podria causar que al momento de ejecurtar la funcion, esta arroje un error, pero si utilizamos ciertos valores por defecto en la definicion en nuestras variables podemos ahorranos complicaciones.
+> Aveces cuando estamos desarrollando un  programa definimos cierta cantidad de parametros los cuales debemos enviarle a una funcion al momento de querer operarla, pero en ocaciones otro desarrollador puede pasar por desapercibido alguno de los argumentos, y esto podria causar que al momento de ejecurtar la funcion, esta arroje un error, pero si utilizamos ciertos valores por defecto en la definicion en nuestras variables podemos ahorranos complicaciones.
 
 ```
 // Forma normal de definir variables por defecto.
@@ -140,7 +140,7 @@ let { username, age } = user;
 👨‍💻 console.log(username, user.age)
 ✅ Result: Manuel 24
 ```
-### Metodo que nos permite propagar la informacion sin tener la necesidad de sobreescribirla denuevo.
+> Metodo que nos permite propagar la informacion sin tener la necesidad de sobreescribirla denuevo.
 ```
 // Spread operator
 
@@ -152,7 +152,7 @@ let data = { ...person, country};
 ✅ ---> Result: { name: 'Alejo', age: 25, country: 'CO' }
 ```
 
-### Forma de dispersar la informacion utilizando un spreed como param, a esto se le define rest-spreed.
+> Forma de dispersar la informacion utilizando un spreed como param, a esto se le define rest-spreed.
 ```
 // Rest-spread
 
@@ -166,7 +166,7 @@ function sum(num, ...values){
 ✅ ---> Result: [ 1, 2, 3, 4 ] 2 => retorna: 2
 ```
 ## 6️⃣ Object-literals (Mejora a los objectos)
-### Podemos utilizar funciones para que nos devuelvan un objecto con todos los argumentos que les enviamos.
+>Podemos utilizar funciones para que nos devuelvan un objecto con todos los argumentos que les enviamos.
 
 ```
 function newUser(user, age, country, uId){
@@ -183,7 +183,7 @@ function newUser(user, age, country, uId){
 ```
 
 ## 7️⃣ Promises (Algo que va a suceder o no).
-### Las promesas se utilizan como los callbacks, los cuales reciben una funcion como parametro, pero en este caso una promesa nos devolvera el valor apartir de una validacion, lo cual podria ser aceptada o rechazada.
+> Las promesas se utilizan como los callbacks, los cuales reciben una funcion como parametro, pero en este caso una promesa nos devolvera el valor apartir de una validacion, lo cual podria ser aceptada o rechazada.
 
 ### ✅resolve -> si fue aceptada la validacion.
 ### ❌reject -> Si fue rechazada la validacion.
@@ -199,7 +199,7 @@ const anotherFunction = () => {
     })
 }
 ```
-### El metodo then nos devuelve el resultado de la funcion anotherFunction().
+> El metodo then nos devuelve el resultado de la funcion anotherFunction().
 ```
 anotherFunction()
     .then(response => console.log(response))
