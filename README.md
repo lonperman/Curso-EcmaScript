@@ -185,8 +185,9 @@ function newUser(user, age, country, uId){
 ## 7️⃣ Promises (Algo que va a suceder o no).
 > Las promesas se utilizan como los callbacks, los cuales reciben una funcion como parametro, pero en este caso una promesa nos devolvera el valor apartir de una validacion, lo cual podria ser aceptada o rechazada.
 
-### ✅resolve -> si fue aceptada la validacion.
-### ❌reject -> Si fue rechazada la validacion.
+> ✅resolve -> si fue aceptada la validacion.
+
+> ❌reject -> Si fue rechazada la validacion.
 
 ```
 const anotherFunction = () => {
@@ -206,4 +207,106 @@ anotherFunction()
     .catch(err => console.log(err));
 
 ✅ ---> Result: Hey!!
+```
+## 8️⃣ Clases (Diseño de clases - Utilizando herencia)
+> Las clases se han utilizado en distintos lenguajes que utilicen la orientacion a objectos, ya que las clases nos permiten utilizar la herencia en diferentes objectos en donde necesitemos cierto elementos instanciados dentro de la estructura de la clase.
+
+```
+//Declarando una clase
+
+class User {};
+
+// Instanciando metodos dentro de la clase.
+
+class user {
+    //metodos
+    greeting(){
+        return 'Hello';
+    }
+};
+
+// Instanciando objectos y utilizando los metodos de la clase.
+
+⚓ const gndx = new user();
+👨‍💻 console.log(gndx.greeting());
+✅ ---> Result: Hello
+
+⚓ const bebeloper = new user();
+👨‍💻 console.log(bebeloper.greeting());
+✅ ---> Result: Hello
+
+// Utilizando el constructor para inicializar.
+
+class user {
+    // Constructor
+    constructor(){
+        console.log('Nuevo Usuario');
+    }
+    greeting(){
+        return 'Hello';
+    }
+}
+
+⚓ const manuel = new user();
+✅ ---> Result: Nuevo Usuario
+```
+### ⚓ This
+> La palabra reservada this, nos sirve como puntero hacia una referencia, en este caso utilizamos this para hacer referencia al elemento padre que contiene la el valor del argumento.
+
+```
+// this 
+class user {
+    constructor(name){
+        this.name = name; //hace referecnia. 
+    }
+    //metodos
+    speak(){
+        return 'Hello';
+    }
+    greeting(){
+        return `${this.speak()} ${this.name}`;
+    }
+}
+
+⚓ const Alejo = new user('Alejo');
+👨‍💻 console.log(Alejo.greeting());
+✅ ---> Result: Hello Alejo
+```
+### Getters & Setters 
+> Los metodos Getters & Setters nos permiten obtener el valor de una variable(Getters) y modificar el valor de las variables(Setters).
+
+```
+class user {
+    //constructor
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+    // metodos
+    speak(){
+        return 'Hello';
+    }
+    greeting(){
+        return `${this.speak()} ${this.name}}`
+    }
+    // Getter
+    get uAge(){
+        return this.age;
+    }
+    // Setter
+    set uAge(n){
+        this.age = n;
+    }
+}
+
+// Instanciando un nuevo objecto
+⚓ const bebeloper1 = new user('David', 15);
+
+// Llamando al metodo Getter
+👨‍💻 console.log(bebeloper1.uAge);
+✅ --> Result: 15
+
+// Llamando al metodo Setter
+👨‍💻 console.log(bebeloper1.uAge = 24);
+✅ --> Result: 24
 ```
