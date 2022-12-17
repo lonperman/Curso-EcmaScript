@@ -214,11 +214,11 @@ anotherFunction()
 ```
 //Declarando una clase
 
-class User {};
+👨‍🔧 class User {};
 
 // Instanciando metodos dentro de la clase.
 
-class user {
+👨‍🔧 class user {
     //metodos
     greeting(){
         return 'Hello';
@@ -237,7 +237,7 @@ class user {
 
 // Utilizando el constructor para inicializar.
 
-class user {
+👨‍🔧 class user {
     // Constructor
     constructor(){
         console.log('Nuevo Usuario');
@@ -255,7 +255,7 @@ class user {
 
 ```
 // this 
-class user {
+👨‍🔧 class user {
     constructor(name){
         this.name = name; //hace referecnia. 
     }
@@ -272,11 +272,11 @@ class user {
 👨‍💻 console.log(Alejo.greeting());
 ✅ ---> Result: Hello Alejo
 ```
-### Getters & Setters 
+### ⚓ Getters & Setters 
 > Los metodos Getters & Setters nos permiten obtener el valor de una variable(Getters) y modificar el valor de las variables(Setters).
 
 ```
-class user {
+👨‍🔧 class user {
     //constructor
     constructor(name, age){
         this.name = name;
@@ -309,4 +309,54 @@ class user {
 // Llamando al metodo Setter
 👨‍💻 console.log(bebeloper1.uAge = 24);
 ✅ --> Result: 24
+```
+### 9️⃣ Module (exportar & importar funciones de diferentes archivos)
+
+> Aveces cuando se quiere obtener un codigo mas limpio y segmentado, no el famoso codigo espagueti, se utilizan modulos los cuales son archivos distintos, en donde estan definidas ciertas funciones que pueden ser requeridas para el desarrollo de un programa.
+
+`$ module.js`
+
+```
+//Se instancia un metodo o funcion en un archivo diferente.
+
+👨‍🔧 const hello = () => {
+    console.log('Hello!');
+}
+
+//Se exporta el metodo o la funcion del archivo.
+
+🛫 export default hello;
+```
+
+`$ 08-module.js`
+```
+// Se importa los elementos del otro archivos.
+🛬 import hello from "./module.js";
+
+// Se ejecuta el metodo importado
+
+👨‍💻 hello();
+✅ ---> Result: Hello!
+```
+
+> Se debe configurar el archivo package.json para poder utilizar un modulo.
+
+`$ package.json`
+```
+{
+  "name": "curso-de-ecmascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "ecmascript"
+  ],
+  "author": "Manuel Perdomo <lonperman@gmail.com>",
+  "license": "MIT",
+  "type": "module" // ➕ Se agrega el modulo. 
+}
 ```

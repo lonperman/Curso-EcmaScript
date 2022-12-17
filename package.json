@@ -11,5 +11,6 @@
     "ecmascript"
   ],
   "author": "Manuel Perdomo <lonperman@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module"
 }
