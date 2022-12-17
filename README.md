@@ -186,7 +186,7 @@ function newUser(user, age, country, uId){
 ## 7️⃣ Promises (Algo que va a suceder o no).
 > Las promesas se utilizan como los callbacks, los cuales reciben una funcion como parametro, pero en este caso una promesa nos devolvera el valor apartir de una validacion, lo cual podria ser aceptada o rechazada.
 
-> ✅resolve -> si fue aceptada la validacion.
+> ✅resolve -> Si fue aceptada la validacion.
 
 > ❌reject -> Si fue rechazada la validacion.
 
@@ -194,14 +194,14 @@ function newUser(user, age, country, uId){
 const anotherFunction = () => {
     return new Promise((resolve,reject) => {
         if(true){
-            resolve('Hey!!')
+        ✅  resolve('Hey!!')
         } else {
-            reject('Whoooops!')
+        ❌  reject('Whoooops!')
         }
     })
 }
 ```
-> El metodo then nos devuelve el resultado de la funcion anotherFunction().
+> El metodo 🛬 then nos devuelve el resultado de la funcion 👨‍🔧 anotherFunction().
 ```
 anotherFunction()
     .then(response => console.log(response))
@@ -367,7 +367,7 @@ anotherFunction()
 
 > Estos se utilizan para guardar la totalidad de datos infinitos, a través de una función matemática a valores futuros. De esta manera ocupan poca memoria, con respecto a si creamos un array u objeto.
 
-### Cómo utilizar generadores
+### ⚓ Cómo utilizar generadores
 > La sintaxis de los generadores comprende lo siguiente:
 
 - La palabra reservada `function*` (con el asterisco al final).
@@ -398,7 +398,7 @@ anotherFunction()
 ...
 ✅ generador.next().value //último valor retornado
 ```
-### Ejemplo de un generador
+### ⚓ Ejemplo de un generador
 > Creamos un generador que retornara tres valores.
 
 ```
@@ -416,7 +416,7 @@ anotherFunction()
 ✅ generador.next() // {value: undefined, done: true}
 ```
 
-### Ejemplo utilizando for.
+### ⚓ Ejemplo utilizando for.
 ```
 👨‍🔧 function* iterate(array){
     for(let value of array){
@@ -435,7 +435,7 @@ anotherFunction()
 ## 1️⃣1️⃣ Set
 > Set es una nueva estructura de datos para almacenar elementos únicos, es decir, sin elementos repetidos.
 
-### Como manipular los Sets
+### ⚓ Como manipular los Sets
 > Para manipular estas estructuras de datos, existen los siguientes métodos:
 
 - `add(value)`: añade un nuevo valor.
@@ -446,7 +446,7 @@ anotherFunction()
 
 
 ```
-\\ Se define una instancia.
+\\ ⚓ Se define una instancia.
 
 const list = new Set();
 
@@ -505,7 +505,7 @@ const list = new Set();
 - El metodo de objetos `hasOwnProperty`.
 - El método `Object.hasOwn`, que recibe el objeto y la propiedad a evaluar.
 
-````
+```
 👨‍🔧 const letras = { a: 1, b: 2, c: 3 }
 
 👨‍💻 "a" in letras 
@@ -514,4 +514,35 @@ const list = new Set();
 ✅ ---> Result: true
 👨‍💻 Object.hasOwn(letras, "a") 
 ✅ ---> Result: true
+```
+# EcmaScript 8
+## Object-entries
+> `Object.entries()` devuelve un array con las entries en forma `[propiedad, valor]` del objeto enviado como argumento.
+```
+👨‍🔧 const countries = {MX: 'Mexico', CO: 'Colombia', CL: 'Chile', PE: 'Peru'};
+
+👨‍💻 console.log(Object.entries(countries));
+✅ ---> Result ⬇: 
+[
+  [ 'MX', 'Mexico' ],
+  [ 'CO', 'Colombia' ],
+  [ 'CL', 'Chile' ],
+  [ 'PE', 'Peru' ]
+]
+```
+## Object-values
+> `Object.values()` devuelve un array con los valores de cada propiedad del objeto enviado como argumento.
+```
+👨‍🔧 const countries = {MX: 'Mexico', CO: 'Colombia', CL: 'Chile', PE: 'Peru'};
+
+👨‍💻 console.log(Object.values(countries));
+✅ ---> Result: [ 'Mexico', 'Colombia', 'Chile', 'Peru' ]
+```
+## Object-keys
+> `Object.keys()` devuelve un array con las propiedades `(keys)` del objeto enviado como argumento.
+```
+👨‍🔧 const countries = {MX: 'Mexico', CO: 'Colombia', CL: 'Chile', PE: 'Peru'};
+
+👨‍💻 console.log(Object.keys(countries));
+✅ ---> Result: [ 'MX', 'CO', 'CL', 'PE' ]
 ```
