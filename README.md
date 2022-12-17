@@ -124,7 +124,7 @@ function newAdmin(name = 'Manuel', age = 25, country = 'CL'){
 👨‍💻 newAdmin();
 ✅ ---> Result: Alejo 25 CO
 ```
-## 5️⃣ Destructuring, Spread operator, Rest-params.(Destructurar arreglos y objectos,Propagar la informacion)
+## 5️⃣ Destructuring, Spread operator, Rest-params.(Destructurar arreglos y objetos,Propagar la informacion)
 
 ```
 // Arrays destructuring
@@ -166,8 +166,8 @@ function sum(num, ...values){
 👨‍💻 sum(1,1,2,3,4)
 ✅ ---> Result: [ 1, 2, 3, 4 ] 2 => retorna: 2
 ```
-## 6️⃣ Object-literals (Mejora a los objectos)
->Podemos utilizar funciones para que nos devuelvan un objecto con todos los argumentos que les enviamos.
+## 6️⃣ Object-literals (Mejora a los objetos)
+>Podemos utilizar funciones para que nos devuelvan un objeto con todos los argumentos que les enviamos.
 
 ```
 function newUser(user, age, country, uId){
@@ -210,7 +210,7 @@ anotherFunction()
 ✅ ---> Result: Hey!!
 ```
 ## 8️⃣ Clases (Diseño de clases - Utilizando herencia)
-> Las clases se han utilizado en distintos lenguajes que utilicen la orientacion a objectos, ya que las clases nos permiten utilizar la herencia en diferentes objectos en donde necesitemos cierto elementos instanciados dentro de la estructura de la clase.
+> Las clases se han utilizado en distintos lenguajes que utilicen la orientacion a objetos, ya que las clases nos permiten utilizar la herencia en diferentes objetos en donde necesitemos cierto elementos instanciados dentro de la estructura de la clase.
 
 ```
 //Declarando una clase
@@ -226,7 +226,7 @@ anotherFunction()
     }
 };
 
-// Instanciando objectos y utilizando los metodos de la clase.
+// Instanciando objetos y utilizando los metodos de la clase.
 
 ⚓ const gndx = new user();
 👨‍💻 console.log(gndx.greeting());
@@ -300,7 +300,7 @@ anotherFunction()
     }
 }
 
-// Instanciando un nuevo objecto
+// Instanciando un nuevo objeto
 ⚓ const bebeloper1 = new user('David', 15);
 
 // Llamando al metodo Getter
@@ -435,3 +435,83 @@ anotherFunction()
 ## 1️⃣1️⃣ Set
 > Set es una nueva estructura de datos para almacenar elementos únicos, es decir, sin elementos repetidos.
 
+### Como manipular los Sets
+> Para manipular estas estructuras de datos, existen los siguientes métodos:
+
+- `add(value)`: añade un nuevo valor.
+- `delete(value)`: elimina un elemento que contiene el `Set`, retorna un booleano si existía o no el valor.
+- `has(value)`: retorna un booleano si existe o no el valor dentro del `Set`.
+- `celar(value)`: elimina todos los valores del `Set`.
+- `size`: retorna la cantidad de elementos del `Set`.
+
+
+```
+\\ Se define una instancia.
+
+const list = new Set();
+
+\\ Agregando elementos al elemento Set.
+
+➕ list.add('item 1');
+➕ list.add('item 2').add('item 3');
+
+👨‍💻 console.log(list)
+✅ ---> Result: Set(3) { 'item 1', 'item 2', 'item 3' }
+```
+
+### Como quitar los elementos repetidos.
+```
+// Array con elementos repetidos.
+
+👨‍🔧 const array = [1, 1, 2, 2, 3, 4, 4, 5]
+
+// Creando nuevo array
+
+👨‍🔧 const sinRepetidos = [... new Set(array)]
+
+👨‍💻 console.log(sinRepetidos)
+✅ ---> Result: [ 1, 2, 3, 4, 5 ]
+```
+# EcmaScript 7
+
+## Exponential
+> El operador de potenciación (exponential operator) consiste en elevar una base a un exponente utilizando el doble asterisco `(**)`.
+
+> `base ** exponente`
+
+```
+👨‍🔧 const data = 3 ** 4;
+👨‍💻 console.log(data);
+✅ ---> Result: 81 
+```
+## Includes
+> El método `includes` determina si un array o string incluye un determinado elemento. Devuelve `true` o `false`, si existe o no respectivamente.
+
+```
+// Utilizando arrays.
+
+👨‍🔧 let numbers = [1, 3, 4, 6, 7, 8];
+👨‍💻 console.log(numbers.includes(9));
+✅ ---> Result: false
+
+👨‍🔧 const list = ['Oscar','David','Ana'];
+👨‍💻 console.log(list.includes('Oscar'));
+✅ ---> Result: true
+```
+### Include para objetos.
+> En objetos también existen formas para saber si existe una propiedad.
+
+- La palabra reservada `in`.
+- El metodo de objetos `hasOwnProperty`.
+- El método `Object.hasOwn`, que recibe el objeto y la propiedad a evaluar.
+
+````
+👨‍🔧 const letras = { a: 1, b: 2, c: 3 }
+
+👨‍💻 "a" in letras 
+✅ ---> Result: true
+👨‍💻 letras.hasOwnProperty("a") 
+✅ ---> Result: true
+👨‍💻 Object.hasOwn(letras, "a") 
+✅ ---> Result: true
+```
