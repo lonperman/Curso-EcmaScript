@@ -546,3 +546,51 @@ const list = new Set();
 👨‍💻 console.log(Object.keys(countries));
 ✅ ---> Result: [ 'MX', 'CO', 'CL', 'PE' ]
 ```
+## ⚓ String padding
+> El padding consiste en rellenar un `string` por el principio o por el final, con el carácter especificado, repetido hasta que complete la longitud máxima.
+
+> Este método recibe dos argumentos:
+
+- La longitud máxima a rellenar, incluyendo el `string` inicial.
+- El `string` para rellenar, por defecto, es un espacio.
+
+> Si la longitud a rellenar es menor que la longitud del string actual, entonces no agregará nada.
+
+### 🛠 Metodos
+#### 🔧 Metodo padStart
+> El método `padStart` completa un `string` con otro `string` en el inicio hasta tener un total de caracteres especificado.
+```
+👨‍🔧 const string = 'Hello';
+
+👨‍💻 console.log(string.padStart(6,'_'));
+✅ ---> Result: _Hello
+
+👨‍💻 console.log(string.padStart(10,'foo'));
+✅ ---> Result: foofoHello
+
+👨‍💻 console.log(string.padStart(6,'123456'));
+✅ ---> Result: 123Hello
+```
+### 🔧 Metodo padEnd
+> El método padEnd completa un string con otro string en el final hasta tener un total de caracteres especificado.
+```
+👨‍🔧 const string = 'Hello';
+👨‍💻 console.log(string.padEnd(8,'123456'));
+✅ ---> Result: Hello123
+
+👨‍💻 console.log(string.padEnd(10,'123456'));
+✅ ---> Result: Hello12345
+
+👨‍💻 console.log(string.padEnd(6,'123456'));
+✅ ---> Result: Hello1
+```
+## ⚓ Trailing commas
+> Las trailing commas consisten en comas al final de objetos o arrays que faciliten añadir nuevos elementos y evitar errores de sintaxis.
+```
+👨‍🔧 const array = [24,34,25,26,,,,45]; //📢 Trailing commas
+
+👨‍💻 console.log(array);
+✅ ---> Result: [ 24, 34, 25, 26, <3 empty items>, 45 ]
+👨‍💻 console.log(array.length);
+✅ ---> Result: 8
+```
