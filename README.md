@@ -141,7 +141,7 @@ let { username, age } = user;
 👨‍💻 console.log(username, user.age)
 ✅ Result: Manuel 24
 ```
-> Metodo que nos permite propagar la informacion sin tener la necesidad de sobreescribirla denuevo.
+> Metodo que nos permite propagar las propiedades sin tener la necesidad de sobreescribirla denuevo los datos ✏.
 ```
 // Spread operator
 
@@ -153,7 +153,27 @@ let data = { ...person, country};
 ✅ ---> Result: { name: 'Alejo', age: 25, country: 'CO' }
 ```
 
-> Forma de dispersar la informacion utilizando un spreed como param, a esto se le define rest-spreed.
+### 💾 Crear copias de objetos utilizando las propiedades de propagación
+
+> Semejante a crear copias de arrays utilizando el operador de propagación, se puede realizar copias de objetos **en un solo nivel** mediante las propiedades de propagación.
+> De esta manera el segundo objeto tendrá una referencia en memoria diferente al original.
+```
+👨‍🔧 const objetoOriginal = {a: 1, b: 2}
+👨‍🔧 const objetoReferencia = objetoOriginal
+👨‍🔧 const objetoCopia = {...objetoOriginal}
+
+✅ objetoReferencia === objetoOriginal // true
+✅ objetoOriginal === objetoCopia // false
+```
+> El operador de propagación sirve para crear una copia en un solo nivel de profundidad, esto quiere decir que si existen objetos o arrays dentro de un objeto a copiar. Entonces los sub-elementos en cada nivel, tendrán **la misma referencia en la copia y en el original.**
+```
+👨‍🔧 const original = { datos: [1, [2, 3], 4, 5] }
+👨‍🔧 const copia = { ...original }
+
+✅ original === copia // false
+✅ original["datos"] === copia["datos"] // true
+```
+> Forma de dispersar las propiedades utilizando un spreed como param, a esto se le define rest-spreed.
 ```
 // Rest-spread
 
@@ -474,7 +494,7 @@ const list = new Set();
 ```
 # ⚙ EcmaScript 7
 
-## Exponential
+## 1️⃣2️⃣ Exponential
 > El operador de potenciación (exponential operator) consiste en elevar una base a un exponente utilizando el doble asterisco `(**)`.
 
 > `base ** exponente`
@@ -484,7 +504,7 @@ const list = new Set();
 👨‍💻 console.log(data);
 ✅ ---> Result: 81 
 ```
-## Includes
+## 1️⃣3️⃣ Includes
 > El método `includes` determina si un array o string incluye un determinado elemento. Devuelve `true` o `false`, si existe o no respectivamente.
 
 ```
@@ -637,4 +657,25 @@ const list = new Set();
 
 👨‍💻 anotherFn();
 ✅ ---> Result: AsynC Hello!
+```
+# ⚙ EcmaScript 9
+## ⚓ Expresiones regulares
+> Las expresiones regulares o RegEx (regular expresions) son **patrones de búsqueda y manipulación de cadenas de caracteres** increíblemente potente y están presentes en todos los lenguajes de programación.
+> En JavaScript se crea este patrón entre barras inclinadas (/patrón/) y se utiliza métodos para hacer coincidir la búsqueda.
+```
+👨‍🔧 const regex = /(\d{4})-(\d{2})-(\d{2})/;
+👨‍💻 const matchers = regex.exec('2022-01-01')
+👨‍💻 console.table(matchers);
+✅ ---> Result: 
+┌─────────┬──────────────┐
+│ (index) │    Values    │
+├─────────┼──────────────┤
+│    0    │ '2022-01-01' │
+│    1    │    '2022'    │
+│    2    │     '01'     │
+│    3    │     '01'     │
+│  index  │      0       │
+│  input  │ '2022-01-01' │
+│ groups  │  undefined   │
+└─────────┴──────────────┘
 ```
