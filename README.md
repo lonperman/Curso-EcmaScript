@@ -1,4 +1,4 @@
-# EcmaScript 6
+# ⚙ EcmaScript 6
 ## 1️⃣ Scope (Alcance de una variable)
    > Las formas de definir una variable en JavaScript como lo son var, let y const, tienen presente un respectivo alcance por lo cual se debe tener presente al momento de ser definidas en el desarrollo de un proyecto.
 
@@ -472,7 +472,7 @@ const list = new Set();
 👨‍💻 console.log(sinRepetidos)
 ✅ ---> Result: [ 1, 2, 3, 4, 5 ]
 ```
-# EcmaScript 7
+# ⚙ EcmaScript 7
 
 ## Exponential
 > El operador de potenciación (exponential operator) consiste en elevar una base a un exponente utilizando el doble asterisco `(**)`.
@@ -515,8 +515,8 @@ const list = new Set();
 👨‍💻 Object.hasOwn(letras, "a") 
 ✅ ---> Result: true
 ```
-# EcmaScript 8
-## Object-entries
+# ⚙ EcmaScript 8
+## 🔧 Object-entries
 > `Object.entries()` devuelve un array con las entries en forma `[propiedad, valor]` del objeto enviado como argumento.
 ```
 👨‍🔧 const countries = {MX: 'Mexico', CO: 'Colombia', CL: 'Chile', PE: 'Peru'};
@@ -530,7 +530,7 @@ const list = new Set();
   [ 'PE', 'Peru' ]
 ]
 ```
-## Object-values
+## 🔧 Object-values
 > `Object.values()` devuelve un array con los valores de cada propiedad del objeto enviado como argumento.
 ```
 👨‍🔧 const countries = {MX: 'Mexico', CO: 'Colombia', CL: 'Chile', PE: 'Peru'};
@@ -538,7 +538,7 @@ const list = new Set();
 👨‍💻 console.log(Object.values(countries));
 ✅ ---> Result: [ 'Mexico', 'Colombia', 'Chile', 'Peru' ]
 ```
-## Object-keys
+## 🔧 Object-keys
 > `Object.keys()` devuelve un array con las propiedades `(keys)` del objeto enviado como argumento.
 ```
 👨‍🔧 const countries = {MX: 'Mexico', CO: 'Colombia', CL: 'Chile', PE: 'Peru'};
@@ -593,4 +593,48 @@ const list = new Set();
 ✅ ---> Result: [ 24, 34, 25, 26, <3 empty items>, 45 ]
 👨‍💻 console.log(array.length);
 ✅ ---> Result: 8
+```
+
+## ⚓ Funciones asíncronas
+> Es otra forma de ejecutar funciones, pero esta presente una particularidad, ya que se ejecutara la funcion pero al utilizar `await` en una proemsa la funcion que tiene el `async` estara pendiente de la respuesta que le devuelva.
+
+### Como utilizar funciones asíncronas
+> La función asíncrona se crea mediante la palabra reservada `async` y retorna una promesa.
+```
+👨‍🔧 async function asyncFunction () {...}
+
+👨‍🔧 const asyncFunction = async () => { ... } 
+```
+> La palabra reservada await significa que espera hasta que una promesa sea resuelta y solo funciona dentro de una función asíncrona. Los bloques try / catch sirven para manejar si la promesa ha sido resuelta o rechazada.
+
+```
+👨‍🔧 async function asyncFunction () {
+  try {
+    const response = await promesa()
+    return response
+  } catch (error) {
+    return error
+  }
+}
+```
+> ¿Cuál es la mejor forma de manejar promesas, then o async / await? Ambas son muy útiles, manejar ambas te hará un mejor desarrollador.
+
+### 👨‍💻 Ejemplo Async-Await
+```
+👨‍🔧 const fnAsync = () => {
+    return new Promise((resolve, reject) => {
+        (true) 
+            ? setTimeout(() => resolve('AsynC'),2000) 
+            : reject(new Error('Error!'));
+    });
+}
+
+👨‍🔧 const anotherFn = async () => {
+ ⏳ const somethig = await fnAsync();
+    console.log(somethig);
+    console.log('Hello!');
+}
+
+👨‍💻 anotherFn();
+✅ ---> Result: AsynC Hello!
 ```
