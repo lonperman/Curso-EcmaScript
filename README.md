@@ -78,10 +78,10 @@ let epicPhrase2 = `${hello} ${world}`;
 
 ```
 // Multi-line strings
-let lorem = 'esto es un string \n' + 'esto es otra linea';
+👨‍🔧 let lorem = 'esto es un string \n' + 'esto es otra linea';
 
 // Temple-literal
-let lorem2 = `Esta es una frase epica
+👨‍🔧 let lorem2 = `Esta es una frase epica
  la continuacion de esa frase epica.`;
 
 👨‍💻 console.log(lorem);
@@ -100,7 +100,7 @@ let lorem2 = `Esta es una frase epica
 ```
 // Forma normal de definir variables por defecto.
 
-function newUser(name, age, country){
+👨‍🔧 function newUser(name, age, country){
     var name = name || 'Manuel';
     var age = age || 25;
     var country = country || 'CO';
@@ -139,7 +139,7 @@ let [a,b] = fruits;
 let user = { username: 'Manuel', age: 24};
 let { username, age } = user;
 👨‍💻 console.log(username, user.age)
-✅ Result: Manuel 24
+✅ ---> Result: Manuel 24
 ```
 > Metodo que nos permite propagar las propiedades sin tener la necesidad de sobreescribirla denuevo los datos ✏.
 ```
@@ -177,7 +177,7 @@ let data = { ...person, country};
 ```
 // Rest-spread
 
-function sum(num, ...values){
+👨‍🔧 function sum(num, ...values){
     console.log(values);
     console.log(num + values[0]);
     return num + values[0];
@@ -190,7 +190,7 @@ function sum(num, ...values){
 >Podemos utilizar funciones para que nos devuelvan un objeto con todos los argumentos que les enviamos.
 
 ```
-function newUser(user, age, country, uId){
+👨‍🔧 function newUser(user, age, country, uId){
     return {
         user,
         age,
@@ -211,7 +211,7 @@ function newUser(user, age, country, uId){
 > ❌reject -> Si fue rechazada la validacion.
 
 ```
-const anotherFunction = () => {
+👨‍🔧 const anotherFunction = () => {
     return new Promise((resolve,reject) => {
         if(true){
         ✅  resolve('Hey!!')
@@ -223,7 +223,7 @@ const anotherFunction = () => {
 ```
 > El metodo 🛬 then nos devuelve el resultado de la funcion 👨‍🔧 anotherFunction().
 ```
-anotherFunction()
+👨‍🔧 anotherFunction()
     .then(response => console.log(response))
     .catch(err => console.log(err));
 
@@ -724,11 +724,11 @@ const list = new Set();
                 David
 ```
 # ⚙ EcmaScript 10
-## ⚓ flat-map y trimStart-trimEnd
-### Qué es el aplanamiento de arrays
+## 🛠 flat-map y trimStart-trimEnd
+### 💡 Qué es el aplanamiento de arrays
 > El aplanamiento consiste en transformar un array de arrays a una sola dimensión. Los métodos `flat` y `flatMap` permitirán realizar el aplanamiento.
 
-### 🛠 Metodo flat
+### 🔧 Metodo flat
 > El método flat devuelve un array donde los sub-arrays han sido propagados hasta una profundidad especificada.
 
 > Este método es inmutable, es decir, retorna un nuevo array con los cambios y no cambia el array original.
@@ -755,7 +755,7 @@ const list = new Set();
 👨‍💻 const result4 = array4.flat(Infinity) 
 ✅ ---> result4: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
-### Método flatMap
+### 🔧 Método flatMap
 > El método `flatMap` es una combinación de los métodos `map` y `flat`. Primero realiza la iteración de los elementos del `array` (como si fuera `map`), y después los aplana en una sola profundidad (como si fuera `flat`).
 
 > Este método es inmutable, es decir, retorna un nuevo array con los cambios y no cambia el array original.
@@ -769,7 +769,7 @@ const list = new Set();
 ✅ ---> Result: [ 'Nunca', 'pares', 'de', 'Aprender' ]
 
 👨‍🔧 const numbers = [1,2, 3, 4]
-👨‍💻numbers.map(number => [number * 2]) 
+👨‍💻 numbers.map(number => [number * 2]) 
 ✅ ---> Result: [[2], [4], [6], [8]]
 👨‍💻 numbers.flatMap(number => [number *2]) 
 ✅ ---> Result: [2, 4, 6, 8]
@@ -779,7 +779,7 @@ const list = new Set();
 👨‍💻 numbers2.flatMap(number => [number *2]) 
 ✅ ---> Result: [ 2, NaN, 8, 10 ]
 ```
-### Eliminar espacios en blanco de un string
+### 🧹 Eliminar espacios en blanco de un string
 > Existen tres métodos para eliminar espacios en blanco de un string:
 
 - El método `trim` elimina los espacios en blanco al **inicio y al final**.
@@ -794,4 +794,39 @@ const list = new Set();
 ✅ ---> result1: 'hola'
 ✅ ---> result2: 'hola      '
 ✅ ---> result3: '      hola'
+```
+# 🛠 try catch y fromEntries
+## 🔧 Parámetro opcional de catch
+> El parámetro opcional de `catch` permite omitir el error si es necesario.
+```
+try {
+  // 📢 Manejar el código
+} catch (err) {
+  // 💡 Se utiliza el parámetro `err`
+}
+
+try {
+  // 📢 Manejar el código
+} catch {
+  // 💡 Manejar el error sin el parámetro.
+}
+```
+> 💡 Aunque siempre es recomendable manejar el error como parámetro, ya que tiene más información del problema.
+
+## 🔧 Cómo transformar un array de arrays en un objeto.
+
+> El método `Object.fromEntries` devuelve un objeto a partir de un array donde sus elementos son las entries en forma `[propiedad, valor]`.
+
+> Se considera la operación inversa de `Object.entries()`.
+```
+👨‍🔧 const arrayEntries = [
+  [ 'name', 'Manuel' ],
+  [ 'email', 'lonper@correo.com' ],
+  [ 'age', 25 ]
+] 
+
+👨‍💻 const usuario = Object.fromEntries(arrayEntries) 
+
+👨‍💻 console.log(usuario)
+✅ ---> Result: { name: 'Manuel', email: 'lonper@correo.com', age: 25 }
 ```
