@@ -1110,3 +1110,38 @@ global === globalThis ✅ ---> Result: true
 👨‍💻 clase.public("Hola")  ✅ ---> Result: 'Hola'
 👨‍💻 clase.private("Hola") ❌ ---> Result: TypeError: clase.private is not a function
 ```
+# ⚙ EcmaScript 13.
+## 🛠 at
+> El método `at` de arrays sirve para acceder a los elementos a partir del índice.
+- `array.at(índice)`
+### 💡 Índices positivos y negativos en arrays
+> Los índices positivos comienzan desde `0` hasta la longitud total menos uno, de **izquierda a derecha** del array. El índice `0` es la primera posición.
+
+```
+[0,1,2,3, ...., lenght-1]
+```
+> Los índices negativos comienzan desde `-1` hasta el negativo de la longitud total del array, de **derecha a izquierda**. El índice `-1` es la última posición.
+```
+[-lenght, ...,  -3, -2, -1]
+```
+### 🔧 Cómo utilizar el método `at`.
+> La utilidad más importante de este método es para manejar **índices negativos**. Algo que no se puede con la notación de corchetes.
+```
+👨‍🔧 const nombres = ["Andres", "Valeria", "Ana", "Ramiro", "Richard"]
+
+👨‍💻 nombres.at(-1) ✅ ---> "Richard"
+👨‍💻 nombres[-1] ❌ ---> undefined
+👨‍💻 nombres.at(-3) ✅ ---> "Ana"
+👨‍💻 nombres[nombres.length -1] ✅ ---> "Richard"
+```
+## 🛠 top level await en el consumo de una API.
+> Top level await permite utilizar la palabra reservada `await`, sin estar dentro de una **función asíncrona** con `async`. Sin embargo, únicamente se puede utilizar `await` en la parte superior del archivo de un módulo.
+
+### 🔧 Cómo utilizar top level await.
+> Anterior a ECMAScript 13, cuando se introdujo funciones asíncronas, si utilizabas `await` fuera de `async`, existirá un error de sintáxis.
+```
+// ❌ Error
+await fetch(URL)
+❌ ---> Result: SyntaxError: await is only valid in async function
+```
+> Ahora, con top level await esto es posible, sin ningún error. Esto puede servir para **importaciones de manera dinámica** o iniciar la conexión de tus bases de datos. Siempre y cuando respetes que debe estar en la parte encima del archivo de tipo módulo.
