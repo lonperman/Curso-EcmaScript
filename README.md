@@ -1,17 +1,17 @@
 # **Table of Content**
 
 ## ⚙ EcmaScript 6
-- ### [Scope (Alcance de una variable)](https://github.com/lonperman/Curso-EcmaScript#1%EF%B8%8F%E2%83%A3-scope-alcance-de-una-variable)
-- ### [Arrow Functions](https://github.com/lonperman/Curso-EcmaScript#2%EF%B8%8F%E2%83%A3-arrow-functions-funciones-flecha)
-- ### [Template Literals (Uso de strings y variables)](https://github.com/lonperman/Curso-EcmaScript#3%EF%B8%8F%E2%83%A3-template-literals-uso-de-strings-y-variables)
-- ### [Default-params. (Definicion de parametros con valor por defecto)](https://github.com/lonperman/Curso-EcmaScript#4%EF%B8%8F%E2%83%A3-default-params-definicion-de-parametros-con-valor-por-defecto)
-- ### [Destructuring, Spread operator, Rest-params.](https://github.com/lonperman/Curso-EcmaScript#5%EF%B8%8F%E2%83%A3-destructuring-spread-operator-rest-paramsdestructurar-arreglos-y-objetospropagar-la-informacion)
-- ### [ Object-literals (Mejora a los objetos)](https://github.com/lonperman/Curso-EcmaScript#6%EF%B8%8F%E2%83%A3-object-literals-mejora-a-los-objetos)
-- ### [Promises (Algo que va a suceder o no).](https://github.com/lonperman/Curso-EcmaScript#7%EF%B8%8F%E2%83%A3-promises-algo-que-va-a-suceder-o-no)
-- ### [Clases (Diseño de clases - Utilizando herencia)](https://github.com/lonperman/Curso-EcmaScript#8%EF%B8%8F%E2%83%A3-clases-dise%C3%B1o-de-clases---utilizando-herencia)
+- ### [Scope (Alcance de una variable)](https://github.com/lonperman/Curso-EcmaScript#-scope-alcance-de-una-variable)
+- ### [Arrow Functions](https://github.com/lonperman/Curso-EcmaScript#-arrow-functions-funciones-flecha)
+- ### [Template Literals (Uso de strings y variables)](https://github.com/lonperman/Curso-EcmaScript#-template-literals-uso-de-strings-y-variables)
+- ### [Default-params. (Definicion de parametros con valor por defecto)](https://github.com/lonperman/Curso-EcmaScript#-default-params-definicion-de-parametros-con-valor-por-defecto)
+- ### [Destructuring, Spread operator, Rest-params.](https://github.com/lonperman/Curso-EcmaScript#-destructuring-spread-operator-rest-paramsdestructurar-arreglos-y-objetospropagar-la-informacion)
+- ### [ Object-literals (Mejora a los objetos)](https://github.com/lonperman/Curso-EcmaScript#-object-literals-mejora-a-los-objetos-1)
+- ### [Promises (Algo que va a suceder o no).](https://github.com/lonperman/Curso-EcmaScript#-promises-algo-que-va-a-suceder-o-no)
+- ### [Clases (Diseño de clases - Utilizando herencia)](https://github.com/lonperman/Curso-EcmaScript#-clases-dise%C3%B1o-de-clases---utilizando-herencia)
 - ### [Module (exportar & importar funciones de diferentes archivos)](https://github.com/lonperman/Curso-EcmaScript#9%EF%B8%8F%E2%83%A3-module-exportar--importar-funciones-de-diferentes-archivos)
 - ### [Generadores](https://github.com/lonperman/Curso-EcmaScript#-generadores)
-- ### [Set (estructura de datos para almacenar elementos únicos)](https://github.com/lonperman/Curso-EcmaScript#1%EF%B8%8F%E2%83%A31%EF%B8%8F%E2%83%A3-set) 
+- ### [Set (estructura de datos para almacenar elementos únicos)](https://github.com/lonperman/Curso-EcmaScript#-set) 
 ## ⚙ EcmaScript 7
 - ### [Exponential](https://github.com/lonperman/Curso-EcmaScript#1%EF%B8%8F%E2%83%A32%EF%B8%8F%E2%83%A3-exponential) 
 - ### [Includes](https://github.com/lonperman/Curso-EcmaScript#1%EF%B8%8F%E2%83%A33%EF%B8%8F%E2%83%A3-includes)
@@ -377,7 +377,7 @@ let data = { ...person, country};
 👨‍💻 console.log(bebeloper1.uAge = 24);
 ✅ --> Result: 24
 ```
-### 9️⃣ Module (exportar & importar funciones de diferentes archivos)
+### 🛠 Module (exportar & importar funciones de diferentes archivos)
 
 > Aveces cuando se quiere obtener un codigo mas limpio y segmentado, no el famoso codigo espagueti, se utilizan modulos los cuales son archivos distintos, en donde estan definidas ciertas funciones que pueden ser requeridas para el desarrollo de un programa.
 
