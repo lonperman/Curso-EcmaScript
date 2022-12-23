@@ -1,3 +1,5 @@
+**Table of Content**
+
 # ⚙ EcmaScript 6
 ## 1️⃣ Scope (Alcance de una variable)
    > Las formas de definir una variable en JavaScript como lo son var, let y const, tienen presente un respectivo alcance por lo cual se debe tener presente al momento de ser definidas en el desarrollo de un proyecto.
@@ -830,7 +832,8 @@ try {
 👨‍💻 console.log(usuario)
 ✅ ---> Result: { name: 'Manuel', email: 'lonper@correo.com', age: 25 }
 ```
-# 🛠 Optional chaining
+# EcmaScript 11
+## 🛠 Optional chaining
 > Cuando intentas acceder a propiedades de un objeto que no existen, JavaScript te retornará `undefined`.
 ```
 👨‍🔧 const usuario = {}
@@ -858,8 +861,8 @@ try {
 
 > Si abusas del encadenamiento opcional y existe un error en un objeto, el programa podría **“ocultarlo”** por un `undefined`, provocando que el debugging sea más complicado.
 
-# 🛠 BigInt y Nullish
-## 🔧 Big Int, enteros muy grandes
+## 🛠 BigInt y Nullish
+### 🔧 Big Int, enteros muy grandes
 > El nuevo dato primitivo `bigint` permite **manejar números enteros muy grandes**. Existen dos formas de crear un `bigint`: el número entero seguido de `n` o mediante la función `BigInt`.
 ```
 👨‍🔧 const number1 = 45n
@@ -888,7 +891,7 @@ try {
 ```
 > Se añade la misma cantidad a ambos tipos de datos, sin embargo, el tipo numérico da un resultado diferente al esperado.
 
-## 🔧 Operador Nullish Coalescing
+### 🔧 Operador Nullish Coalescing
 > El operador nullish coalescing (`??`) consiste en evaluar una variable si es `undefined` o `null` para asignarle un valor.
 
 > El siguiente ejemplo se lee como: `¿usuario.name` es `undefined` o `null`? Si es así, asígnale un valor por defecto `"Alejo"`, caso contrario asigna el valor de `usuario.name`.
@@ -902,7 +905,7 @@ try {
 👨‍💻 console.log(nombre1) ✅ ---> Result: 'Alejo' 
 👨‍💻 console.log(nombre2) ✅ ---> Result: 'Nicolas'
 ```
-## 💡 Diferencia entre el operador OR y el Nullish coalescing
+### 💡 Diferencia entre el operador OR y el Nullish coalescing
 
 > El operador OR (`||`) **evalúa un valor falsey**. Un valor falsy es aquel que es falso en un contexto booleano, estos son: `0`, `""` (string vacío), `false`, `NaN`, `undefined` o `null`.
 
@@ -916,10 +919,10 @@ try {
 👨‍💻 console.log( orId ) ❌ ---> Result: 'Sin id'
 👨‍💻 console.log( nullishId ) ✅ ---> Result: 0
 ```
-# 🛠 Promise.allSettled
+## 🛠 Promise.allSettled
 > En alguna situación necesitarás manejar varias **promesas** y obtener sus resultados. ¿Cómo? Utilizando los métodos `Promise.all` y `Promise.allSettled`.
 
-## 🔧 Promise.all
+### 🔧 Promise.all
 > El método `Promise.all` sirve para manejar varias promesas al mismo tiempo. Recibe como argumento un array de promesas.
 ```
 👨‍🔧 Promise.all([promesa1, promesa2, promesa3])
@@ -928,7 +931,7 @@ try {
 ```
 > El problema es que `Promise.all()` se resolverá, si y solo si **todas las promesas fueron resueltas**. Si al menos una promesa es rechazada, `Promise.all` será rechazada.
 
-## 🔧 Promise.allSettled
+### 🔧 Promise.allSettled
 > `Promise.allSettled()` permite manejar varias promesas, que devolverá un array de objetos con el **estado y el valor de cada promesa, haya sido resuelta o rechazada**.
 
 ```
@@ -948,8 +951,8 @@ try {
 ```
 > ¿Debería usar `Promise.allSettled` en lugar de `Promise.all`? No, porque ambas son muy útiles dependiendo cómo quieras **manejar tus promesas**.
 
-# 🛠 globalThis y matchAll.
-## 🔧 Objeto global para cualquier plataforma
+## 🛠 globalThis y matchAll.
+### 🔧 Objeto global para cualquier plataforma
 > El motor de JavaScript, aquel que compila tu archivo y lo convierte en código que entiende el computador, **al iniciar la compilación crea un objeto global**.
 
 > **El objeto global proporciona funciones y variables propias e integradas en el lenguaje o el entorno**. Dependiendo la plataforma, este objeto global tendrá un nombre diferente.
@@ -1000,10 +1003,10 @@ global === globalThis ✅ ---> Result: true
         ]
     ]
 ```
-# 🛠 dynamic Import
+## 🛠 dynamic Import
 > La expresión `import()` permite manejar módulos dinámicamente, ya que la sintaxis de ECMAScript `import ... from ...` no lo permite.
 
-## Cómo utilizar importación dinámica.
+### Cómo utilizar importación dinámica.
 > La **importación dinámica** consiste en cargar los módulos cuando el usuario los vaya a utilizar, y no al iniciar la aplicación. Esto permite que la página web sea más rápida, porque descarga menos recursos.
 
 > La expresión `import()` recibe un argumento de tipo `string` con la ruta del módulo a importar y devuelve una promesa.
