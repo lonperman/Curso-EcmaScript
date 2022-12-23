@@ -1,5 +1,8 @@
 **Table of Content**
 
+# Scope (Alcance de una variable) [scope link](https://github.com/lonperman/Curso-EcmaScript#1%EF%B8%8F%E2%83%A3-scope-alcance-de-una-variable)
+# Arrow Functions (Funciones Flecha)[Arrow link](https://github.com/lonperman/Curso-EcmaScript#2%EF%B8%8F%E2%83%A3-arrow-functions-funciones-flecha)
+
 # ⚙ EcmaScript 6
 ## 1️⃣ Scope (Alcance de una variable)
    > Las formas de definir una variable en JavaScript como lo son var, let y const, tienen presente un respectivo alcance por lo cual se debe tener presente al momento de ser definidas en el desarrollo de un proyecto.
