@@ -1,6 +1,6 @@
 # **Table of Content**
 
-## EcmaScript 6
+## ⚙ EcmaScript 6
 - ### [Scope (Alcance de una variable)](https://github.com/lonperman/Curso-EcmaScript#1%EF%B8%8F%E2%83%A3-scope-alcance-de-una-variable)
 - ### [Arrow Functions](https://github.com/lonperman/Curso-EcmaScript#2%EF%B8%8F%E2%83%A3-arrow-functions-funciones-flecha)
 - ### [Template Literals (Uso de strings y variables)](https://github.com/lonperman/Curso-EcmaScript#3%EF%B8%8F%E2%83%A3-template-literals-uso-de-strings-y-variables)
@@ -12,39 +12,55 @@
 - ### [Module (exportar & importar funciones de diferentes archivos)](https://github.com/lonperman/Curso-EcmaScript#9%EF%B8%8F%E2%83%A3-module-exportar--importar-funciones-de-diferentes-archivos)
 - ### [Generadores](https://github.com/lonperman/Curso-EcmaScript#-generadores)
 - ### [Set (estructura de datos para almacenar elementos únicos)](https://github.com/lonperman/Curso-EcmaScript#1%EF%B8%8F%E2%83%A31%EF%B8%8F%E2%83%A3-set) 
-## EcmaScript 7
+## ⚙ EcmaScript 7
 - ### [Exponential](https://github.com/lonperman/Curso-EcmaScript#1%EF%B8%8F%E2%83%A32%EF%B8%8F%E2%83%A3-exponential) 
 - ### [Includes](https://github.com/lonperman/Curso-EcmaScript#1%EF%B8%8F%E2%83%A33%EF%B8%8F%E2%83%A3-includes)
-## EcmaScript 8
+## ⚙ EcmaScript 8
 - ### [Object-entries](https://github.com/lonperman/Curso-EcmaScript#-object-entries)
 - ### [Object-values](https://github.com/lonperman/Curso-EcmaScript#-object-values)
 - ### [Object-keys](https://github.com/lonperman/Curso-EcmaScript#-object-keys)
 - ### [String padding](https://github.com/lonperman/Curso-EcmaScript#-string-padding)
 - ### [Trailing commas](https://github.com/lonperman/Curso-EcmaScript#-trailing-commas)
 - ### [Funciones asíncronas](https://github.com/lonperman/Curso-EcmaScript#-funciones-as%C3%ADncronas)
-# EcmaScript 9
+## ⚙ EcmaScript 9
 - ### [Expresiones regulares](https://github.com/lonperman/Curso-EcmaScript#-expresiones-regulares)
 - ### [Método finally en promesas](https://github.com/lonperman/Curso-EcmaScript#-m%C3%A9todo-finally-en-promesas)
 - ### [Generadores asíncronos](https://github.com/lonperman/Curso-EcmaScript#-generadores-as%C3%ADncronos)
+## ⚙ EcmaScript 10
+- ### [flat-map y trimStart-trimEnd](https://github.com/lonperman/Curso-EcmaScript#-flat-map-y-trimstart-trimend)
+- ### [try catch y fromEntries](https://github.com/lonperman/Curso-EcmaScript#-try-catch-y-fromentries)
+## ⚙ EcmaScript 11
+- ### [Optional chaining](https://github.com/lonperman/Curso-EcmaScript#-optional-chaining)
+- ### [BigInt y Nullish](https://github.com/lonperman/Curso-EcmaScript#-bigint-y-nullish)
+- ### [Promise.allSettled](https://github.com/lonperman/Curso-EcmaScript#-promiseallsettled)
+- ### [globalThis y matchAll](https://github.com/lonperman/Curso-EcmaScript#-globalthis-y-matchall)
+- ### [Método matchAll para expresiones regulares.](https://github.com/lonperman/Curso-EcmaScript#-m%C3%A9todo-matchall-para-expresiones-regulares)
+- ### [Dynamic Import](https://github.com/lonperman/Curso-EcmaScript#-dynamic-import)
+## ⚙ EcmaScript 12
+- ### [numeric-separators y replaceAll](https://github.com/lonperman/Curso-EcmaScript#-numeric-separators-y-replaceall)
+- ### [promise-any y métodos privados](https://github.com/lonperman/Curso-EcmaScript#-promise-any-y-m%C3%A9todos-privados)
+## ⚙ EcmaScript 13
+- ### [at](https://github.com/lonperman/Curso-EcmaScript#-at)
+- ### [top level await en el consumo de una API](https://github.com/lonperman/Curso-EcmaScript#-top-level-await-en-el-consumo-de-una-api)
 
 --------------------
 # ⚙ EcmaScript 6
-## 1️⃣ Scope (Alcance de una variable)
+## 🛠 Scope (Alcance de una variable)
    > Las formas de definir una variable en JavaScript como lo son var, let y const, tienen presente un respectivo alcance por lo cual se debe tener presente al momento de ser definidas en el desarrollo de un proyecto.
 
 
 ```
-const fruits = () => {
-    if(true){
-        var fruit1 = 'Apple'; // function scope
-        let fruit2 = 'Kiwi'; // block scope
-        const fruit3 = 'Banana'; // block scope
-    }
+👨‍🔧 const fruits = () => {
+        if(true){
+            var fruit1 = 'Apple'; // function scope
+            let fruit2 = 'Kiwi'; // block scope
+            const fruit3 = 'Banana'; // block scope
+        }
 
-    console.log(fruit1); // La variable var se imprime
-    console.log(fruit2); // variable let no se imprime por su respectivo scope
-    console.log(fruit3) //variable const no se imprime por su respectivo scope
-}
+    📢 console.log(fruit1); // La variable var se imprime
+    📢 console.log(fruit2); // variable let no se imprime por su respectivo scope
+    📢 console.log(fruit3) //variable const no se imprime por su respectivo scope
+    }
 
 👨‍💻 fruits()
 
@@ -54,15 +70,15 @@ const fruits = () => {
 
 ```
 
-## 2️⃣ Arrow Functions (Funciones Flecha)
+## 🛠 Arrow Functions (Funciones Flecha)
 > En la version de ecmaScript 6 contamos con las funciones flecha en donde se agrega una nueva forma de definir una funcion ademas de la forma convencional de como se definen dentro del desarrollo de un proyecto.
 
 ```
 // Forma normal de definir una funcion.
 
-function square(num){
-    return num*num;
-}
+👨‍🔧  function square(num){
+        return num*num;
+    }
 
 👨‍💻 ---> console.log(square(3));
 ✅ ---> Result: 9
@@ -71,34 +87,34 @@ function square(num){
 ```
 // Forma de definir una funcion como arrow-function.
 
-const square = (num) => {
-    return num*num;
-}
+👨‍🔧  const square = (num) => {
+        return num*num;
+    }
 
 👨‍💻 ---> console.log(square(3));
 ✅ ---> Result: 9
 
 // Arrow con el return implicito
 
-const square = num => num*num;
+🔨 const square = num => num*num;
 
 👨‍💻 ---> console.log(square(3));
 ✅ ---> Result: 9
 ```
-## 3️⃣ Template Literals (Uso de strings y variables)
+## 🛠 Template Literals (Uso de strings y variables)
   > Los templates literals se utilizan para plasmar textos de una manera más dinamica, ya que este nos permite utilizar string y variables dentro de un mismo texto o parrafo dandonos la opcion de cambiar ciertos elementos y ahorrandonos en si, el volver escribir el mismo texto y tener que cambiar ciertas palabras.
 
 ```
-let hello = 'Hello';
-let world = 'World';
-let epicPhrase = hello + ' ' + world + '!';
+👨‍🔧 let hello = 'Hello';
+👨‍🔧 let world = 'World';
+👨‍🔧 let epicPhrase = hello + ' ' + world + '!';
 
 // Forma normal.
 👨‍💻 console.log(epicPhrase);
 ✅ ---> Result: Hello World!
 
 // Template Literals
-let epicPhrase2 = `${hello} ${world}`;
+👨‍🔧 let epicPhrase2 = `${hello} ${world}`;
 
 👨‍💻 console.log(epicPhrase2)
 ✅ ---> Result: Hello World
@@ -124,7 +140,7 @@ let epicPhrase2 = `${hello} ${world}`;
         la continuacion de esa frase epica. // 2️⃣ Segundo console.
 ```
 
-## 4️⃣ Default-params. (Definicion de parametros con valor por defecto)
+## 🛠 Default-params. (Definicion de parametros con valor por defecto)
 > Aveces cuando estamos desarrollando un  programa definimos cierta cantidad de parametros los cuales debemos enviarle a una funcion al momento de querer operarla, pero en ocaciones otro desarrollador puede pasar por desapercibido alguno de los argumentos, y esto podria causar que al momento de ejecurtar la funcion, esta arroje un error, pero si utilizamos ciertos valores por defecto en la definicion en nuestras variables podemos ahorranos complicaciones.
 
 ```
@@ -147,14 +163,14 @@ let epicPhrase2 = `${hello} ${world}`;
 ```
 //Forma de definir por defecto los parametros desde su construccion.
 
-function newAdmin(name = 'Manuel', age = 25, country = 'CL'){
-    console.log(name, age, country);
-}
+👨‍🔧  function newAdmin(name = 'Manuel', age = 25, country = 'CL'){
+        console.log(name, age, country);
+    }
 
 👨‍💻 newAdmin();
 ✅ ---> Result: Alejo 25 CO
 ```
-## 5️⃣ Destructuring, Spread operator, Rest-params.(Destructurar arreglos y objetos,Propagar la informacion)
+## 🛠 Destructuring, Spread operator, Rest-params.(Destructurar arreglos y objetos,Propagar la informacion)
 
 ```
 // Arrays destructuring
@@ -216,7 +232,7 @@ let data = { ...person, country};
 👨‍💻 sum(1,1,2,3,4)
 ✅ ---> Result: [ 1, 2, 3, 4 ] 2 => retorna: 2
 ```
-## 6️⃣ Object-literals (Mejora a los objetos)
+## 🛠 Object-literals (Mejora a los objetos)
 >Podemos utilizar funciones para que nos devuelvan un objeto con todos los argumentos que les enviamos.
 
 ```
@@ -233,7 +249,7 @@ let data = { ...person, country};
 ✅ ---> Result: { user: 'lonper', age: 25, country: 'CO', uId: 1 }
 ```
 
-## 7️⃣ Promises (Algo que va a suceder o no).
+## 🛠 Promises (Algo que va a suceder o no).
 > Las promesas se utilizan como los callbacks, los cuales reciben una funcion como parametro, pero en este caso una promesa nos devolvera el valor apartir de una validacion, lo cual podria ser aceptada o rechazada.
 
 > ✅resolve -> Si fue aceptada la validacion.
@@ -259,7 +275,7 @@ let data = { ...person, country};
 
 ✅ ---> Result: Hey!!
 ```
-## 8️⃣ Clases (Diseño de clases - Utilizando herencia)
+## 🛠 Clases (Diseño de clases - Utilizando herencia)
 > Las clases se han utilizado en distintos lenguajes que utilicen la orientacion a objetos, ya que las clases nos permiten utilizar la herencia en diferentes objetos en donde necesitemos cierto elementos instanciados dentro de la estructura de la clase.
 
 ```
@@ -301,7 +317,7 @@ let data = { ...person, country};
 ⚓ const manuel = new user();
 ✅ ---> Result: Nuevo Usuario
 ```
-### ⚓ This
+### 🏷 This
 > La palabra reservada this, nos sirve como puntero hacia una referencia, en este caso utilizamos this para hacer referencia al elemento padre que contiene la el valor del argumento.
 
 ```
@@ -323,7 +339,7 @@ let data = { ...person, country};
 👨‍💻 console.log(Alejo.greeting());
 ✅ ---> Result: Hello Alejo
 ```
-### ⚓ Getters & Setters 
+### ⚖ Getters & Setters 
 > Los metodos Getters & Setters nos permiten obtener el valor de una variable(Getters) y modificar el valor de las variables(Setters).
 
 ```
@@ -365,7 +381,7 @@ let data = { ...person, country};
 
 > Aveces cuando se quiere obtener un codigo mas limpio y segmentado, no el famoso codigo espagueti, se utilizan modulos los cuales son archivos distintos, en donde estan definidas ciertas funciones que pueden ser requeridas para el desarrollo de un programa.
 
-`$ module.js`
+`📑 $ module.js`
 
 ```
 //Se instancia un metodo o funcion en un archivo diferente.
@@ -379,7 +395,7 @@ let data = { ...person, country};
 🛫 export default hello;
 ```
 
-`$ 08-module.js`
+`📑 $ 08-module.js`
 ```
 // Se importa los elementos del otro archivos.
 🛬 import hello from "./module.js";
@@ -392,7 +408,7 @@ let data = { ...person, country};
 
 > Se debe configurar el archivo package.json para poder utilizar un modulo.
 
-`$ package.json`
+`📑 $ package.json`
 ```
 {
   "name": "curso-de-ecmascript",
@@ -412,12 +428,12 @@ let data = { ...person, country};
 }
 ```
 
-## 🔟 Generadores
+## 🛠 Generadores
 > Los generadores son funciones especiales que pueden pausar su ejecución, luego volver al punto donde se quedaron, recordando su scope y seguir retornando valores.
 
 > Estos se utilizan para guardar la totalidad de datos infinitos, a través de una función matemática a valores futuros. De esta manera ocupan poca memoria, con respecto a si creamos un array u objeto.
 
-### ⚓ Cómo utilizar generadores
+### 💡 Cómo utilizar generadores
 > La sintaxis de los generadores comprende lo siguiente:
 
 - La palabra reservada `function*` (con el asterisco al final).
@@ -448,7 +464,7 @@ let data = { ...person, country};
 ...
 ✅ generador.next().value //último valor retornado
 ```
-### ⚓ Ejemplo de un generador
+### 🔧 Ejemplo de un generador
 > Creamos un generador que retornara tres valores.
 
 ```
@@ -466,7 +482,7 @@ let data = { ...person, country};
 ✅ generador.next() // {value: undefined, done: true}
 ```
 
-### ⚓ Ejemplo utilizando for.
+### 🔧 Ejemplo utilizando for.
 ```
 👨‍🔧 function* iterate(array){
     for(let value of array){
@@ -482,10 +498,10 @@ let data = { ...person, country};
 👨‍💻 console.log(it.next().value) // ✅ Manuel
 👨‍💻 console.log(it.next().value) // ✅ Nicolas
 ```
-## 1️⃣1️⃣ Set
+## 🛠 Set
 > Set es una nueva estructura de datos para almacenar elementos únicos, es decir, sin elementos repetidos.
 
-### ⚓ Como manipular los Sets
+### 💡 Como manipular los Sets
 > Para manipular estas estructuras de datos, existen los siguientes métodos:
 
 - `add(value)`: añade un nuevo valor.
@@ -496,7 +512,7 @@ let data = { ...person, country};
 
 
 ```
-\\ ⚓ Se define una instancia.
+\\ 🔨 Se define una instancia.
 
 const list = new Set();
 
@@ -524,7 +540,7 @@ const list = new Set();
 ```
 # ⚙ EcmaScript 7
 
-## 1️⃣2️⃣ Exponential
+## 🛠 Exponential
 > El operador de potenciación (exponential operator) consiste en elevar una base a un exponente utilizando el doble asterisco `(**)`.
 
 > `base ** exponente`
@@ -534,7 +550,7 @@ const list = new Set();
 👨‍💻 console.log(data);
 ✅ ---> Result: 81 
 ```
-## 1️⃣3️⃣ Includes
+## 🛠 Includes
 > El método `includes` determina si un array o string incluye un determinado elemento. Devuelve `true` o `false`, si existe o no respectivamente.
 
 ```
@@ -596,7 +612,7 @@ const list = new Set();
 👨‍💻 console.log(Object.keys(countries));
 ✅ ---> Result: [ 'MX', 'CO', 'CL', 'PE' ]
 ```
-## ⚓ String padding
+## 🛠 String padding
 > El padding consiste en rellenar un `string` por el principio o por el final, con el carácter especificado, repetido hasta que complete la longitud máxima.
 
 > Este método recibe dos argumentos:
@@ -634,7 +650,7 @@ const list = new Set();
 👨‍💻 console.log(string.padEnd(6,'123456'));
 ✅ ---> Result: Hello1
 ```
-## ⚓ Trailing commas
+## 🛠 Trailing commas
 > Las trailing commas consisten en comas al final de objetos o arrays que faciliten añadir nuevos elementos y evitar errores de sintaxis.
 ```
 👨‍🔧 const array = [24,34,25,26,,,,45]; //📢 Trailing commas
@@ -645,10 +661,10 @@ const list = new Set();
 ✅ ---> Result: 8
 ```
 
-## ⚓ Funciones asíncronas
+## 🛠 Funciones asíncronas
 > Es otra forma de ejecutar funciones, pero esta presente una particularidad, ya que se ejecutara la funcion pero al utilizar `await` en una proemsa la funcion que tiene el `async` estara pendiente de la respuesta que le devuelva.
 
-### Como utilizar funciones asíncronas
+### 🔧 Como utilizar funciones asíncronas
 > La función asíncrona se crea mediante la palabra reservada `async` y retorna una promesa.
 ```
 👨‍🔧 async function asyncFunction () {...}
@@ -689,7 +705,7 @@ const list = new Set();
 ✅ ---> Result: AsynC Hello!
 ```
 # ⚙ EcmaScript 9
-## ⚓ Expresiones regulares
+## 🛠 Expresiones regulares
 > Las expresiones regulares o RegEx (regular expresions) son **patrones de búsqueda y manipulación de cadenas de caracteres** increíblemente potente y están presentes en todos los lenguajes de programación.
 > En JavaScript se crea este patrón entre barras inclinadas (/patrón/) y se utiliza métodos para hacer coincidir la búsqueda.
 ```
@@ -709,7 +725,7 @@ const list = new Set();
 │ groups  │  undefined   │
 └─────────┴──────────────┘
 ```
-## ⚓ Método finally en promesas
+## 🛠 Método finally en promesas
 > El método `finally` para promesas consiste en ejecutar código después que una promesa haya sido ejecutada como resuelta o rechazada.
 ```
 👨‍🔧 promesa()
@@ -717,7 +733,7 @@ const list = new Set();
     .catch(error => console.log(response) //✅ Promesa rechazada
     .finally( () => console.log("Finalizado") ) //✅ Código final  
 ```
-## ⚓ Generadores asíncronos
+## 🛠 Generadores asíncronos
 > Los generados asíncronos son semejantes a los generadores que ya conoces, pero combinando sintáxis de promesas.
 ```
 👨‍🔧 async function* anotherGenerator(){
@@ -825,8 +841,8 @@ const list = new Set();
 ✅ ---> result2: 'hola      '
 ✅ ---> result3: '      hola'
 ```
-# 🛠 try catch y fromEntries
-## 🔧 Parámetro opcional de catch
+## 🛠 try catch y fromEntries
+### 🔧 Parámetro opcional de catch
 > El parámetro opcional de `catch` permite omitir el error si es necesario.
 ```
 try {
@@ -843,7 +859,7 @@ try {
 ```
 > 💡 Aunque siempre es recomendable manejar el error como parámetro, ya que tiene más información del problema.
 
-## 🔧 Cómo transformar un array de arrays en un objeto.
+### 🔧 Cómo transformar un array de arrays en un objeto.
 
 > El método `Object.fromEntries` devuelve un objeto a partir de un array donde sus elementos son las entries en forma `[propiedad, valor]`.
 
@@ -860,7 +876,7 @@ try {
 👨‍💻 console.log(usuario)
 ✅ ---> Result: { name: 'Manuel', email: 'lonper@correo.com', age: 25 }
 ```
-# EcmaScript 11
+# ⚙ EcmaScript 11
 ## 🛠 Optional chaining
 > Cuando intentas acceder a propiedades de un objeto que no existen, JavaScript te retornará `undefined`.
 ```
@@ -1000,7 +1016,7 @@ window === globalThis ✅ ---> Result: true
 // En Node.js
 global === globalThis ✅ ---> Result: true
 ```
-## 🔧 Método `matchAll` para expresiones regulares.
+## 🛠 Método `matchAll` para expresiones regulares.
 > El método `matchAll` de los strings **devuelve un iterable** con todas las coincidencias del string específico a partir de una expresión regular, colocada como argumento.
 - `string.matchAll(regex)`
 > En el iterable, existe una propiedad denominada `index` con el índice del string donde la búsqueda coincide.
@@ -1031,7 +1047,7 @@ global === globalThis ✅ ---> Result: true
         ]
     ]
 ```
-## 🛠 dynamic Import
+## 🛠 Dynamic Import
 > La expresión `import()` permite manejar módulos dinámicamente, ya que la sintaxis de ECMAScript `import ... from ...` no lo permite.
 
 ### Cómo utilizar importación dinámica.
