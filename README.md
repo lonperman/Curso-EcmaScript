@@ -857,3 +857,146 @@ try {
 > Por ejemplo, en un objeto `usuario` que siempre existe, pero la propiedad `redes` es opcional, entonces se debería escribir `usuario.redes?.facebook` y no `usuario?.redes?.facebook`.
 
 > Si abusas del encadenamiento opcional y existe un error en un objeto, el programa podría **“ocultarlo”** por un `undefined`, provocando que el debugging sea más complicado.
+
+# 🛠 BigInt y Nullish
+## 🔧 Big Int, enteros muy grandes
+> El nuevo dato primitivo `bigint` permite **manejar números enteros muy grandes**. Existen dos formas de crear un `bigint`: el número entero seguido de `n` o mediante la función `BigInt`.
+```
+👨‍🔧 const number1 = 45n
+👨‍🔧 const number2 = BigInt(45)
+
+👨‍💻 console.log(typeof 45n) 
+✅ ---> Result: 'bigint'
+```
+> JavaScript tiene límites numéricos, un máximo `Number.MAX_SAFE_INTEGER` y un mínimo `Number.MIN_SAFE_INTEGER`.
+
+```
+👨‍🔧 const max = Number.MAX_SAFE_INTEGER
+👨‍🔧 const min = Number.MIN_SAFE_INTEGER
+
+👨‍💻 console.log(max)  ✅ ---> Result: 9007199254740991
+👨‍💻 console.log(min)  ✅ ---> Result: -9007199254740991
+```
+> **Después de los límites, los cálculos muestran resultados erróneos**. Los `bigint` ayudan a manejar operaciones de enteros fuera de los límites mencionados.
+```
+👨‍🔧 const increment = 2
+👨‍🔧 const number = Number.MAX_SAFE_INTEGER + increment
+👨‍🔧 const bigInt = BigInt(Number.MAX_SAFE_INTEGER) + BigInt(increment)
+
+👨‍💻 console.log(number) ✅ ---> Result: 9007199254740992
+👨‍💻 console.log(bigInt) ✅ ---> Result: 9007199254740993n
+```
+> Se añade la misma cantidad a ambos tipos de datos, sin embargo, el tipo numérico da un resultado diferente al esperado.
+
+## 🔧 Operador Nullish Coalescing
+> El operador nullish coalescing (`??`) consiste en evaluar una variable si es `undefined` o `null` para asignarle un valor.
+
+> El siguiente ejemplo se lee como: `¿usuario.name` es `undefined` o `null`? Si es así, asígnale un valor por defecto `"Alejo"`, caso contrario asigna el valor de `usuario.name`.
+```
+👨‍🔧 const usuario1 = {}
+👨‍💻 const nombre1 = usuario1.name ?? "Alejo"
+
+👨‍🔧 const usuario2 = {name: "Nicolas"}
+👨‍💻 const nombre2 = usuario2.name ?? "Alejo"
+
+👨‍💻 console.log(nombre1) ✅ ---> Result: 'Alejo' 
+👨‍💻 console.log(nombre2) ✅ ---> Result: 'Nicolas'
+```
+## 💡 Diferencia entre el operador OR y el Nullish coalescing
+
+> El operador OR (`||`) **evalúa un valor falsey**. Un valor falsy es aquel que es falso en un contexto booleano, estos son: `0`, `""` (string vacío), `false`, `NaN`, `undefined` o `null`.
+
+> Puede que recibas una variable con un valor falsy que necesites asignarle a otra variable, que no sea `null` o `undefined`. Si evalúas con el operador OR, este lo cambiará, provocando un resultado erróneo.
+```
+👨‍🔧 const id = 0
+
+👨‍🔧 const orId = id || "Sin id"
+👨‍🔧 const nullishId = id ?? "Sin id"
+
+👨‍💻 console.log( orId ) ❌ ---> Result: 'Sin id'
+👨‍💻 console.log( nullishId ) ✅ ---> Result: 0
+```
+# 🛠 Promise.allSettled
+> En alguna situación necesitarás manejar varias **promesas** y obtener sus resultados. ¿Cómo? Utilizando los métodos `Promise.all` y `Promise.allSettled`.
+
+## 🔧 Promise.all
+> El método `Promise.all` sirve para manejar varias promesas al mismo tiempo. Recibe como argumento un array de promesas.
+```
+👨‍🔧 Promise.all([promesa1, promesa2, promesa3])
+        .then(respuesta => console.log(respuesta))
+        .catch(error => console.log(error))
+```
+> El problema es que `Promise.all()` se resolverá, si y solo si **todas las promesas fueron resueltas**. Si al menos una promesa es rechazada, `Promise.all` será rechazada.
+
+## 🔧 Promise.allSettled
+> `Promise.allSettled()` permite manejar varias promesas, que devolverá un array de objetos con el **estado y el valor de cada promesa, haya sido resuelta o rechazada**.
+
+```
+👨‍🔧 const promise1 = new Promise((resolve, reject) => reject("Rechazada"));
+👨‍🔧 const promise2 = new Promise((resolve, reject) => resolve("Resuelta"));
+👨‍🔧 const promise3 = new Promise((resolve, reject) => resolve("Resuelta 2"));
+
+👨‍💻 Promise.allSettled([promise1, promise2, promise3])
+        .then(response => console.log(response));
+
+✅ ---> Result:
+    [
+        { status: 'rejected', reason: 'Rechazada' },
+        { status: 'fulfilled', value: 'Resuelta' },
+        { status: 'fulfilled', value: 'Resuelta 2' }
+    ]
+```
+> ¿Debería usar `Promise.allSettled` en lugar de `Promise.all`? No, porque ambas son muy útiles dependiendo cómo quieras **manejar tus promesas**.
+
+# 🛠 globalThis y matchAll.
+## 🔧 Objeto global para cualquier plataforma
+> El motor de JavaScript, aquel que compila tu archivo y lo convierte en código que entiende el computador, **al iniciar la compilación crea un objeto global**.
+
+> **El objeto global proporciona funciones y variables propias e integradas en el lenguaje o el entorno**. Dependiendo la plataforma, este objeto global tendrá un nombre diferente.
+
+> En el navegador el objeto global es `window`, para Node.js es `global`, y así para cada entorno. Sin embargo, en Node.js no podrás acceder a `window`, ni en el navegador podrás acceder a `global`.
+
+> Para estandarizar el objeto global se creó `globalThis`, un objeto compatible para cualquier plataforma.
+
+```
+// Ejecuta el siguiente código y observa que muestra
+👨‍💻 console.log(window) ❌
+👨‍💻 console.log(globalThis) ✅
+
+// En el navegador
+window === globalThis ✅ ---> Result: true
+
+// En Node.js
+global === globalThis ✅ ---> Result: true
+```
+## 🔧 Método `matchAll` para expresiones regulares.
+> El método `matchAll` de los strings **devuelve un iterable** con todas las coincidencias del string específico a partir de una expresión regular, colocada como argumento.
+- `string.matchAll(regex)`
+> En el iterable, existe una propiedad denominada `index` con el índice del string donde la búsqueda coincide.
+
+```
+🔧 const regex = /\b(Apple)+\b/g
+
+👨‍🔧 const fruit = "Apple, Banana, Kiwi, Apple, Orange, etc. etc. etc."
+
+// Tranformación del iterable retornado a array
+👨‍💻 const array = [...fruit.matchAll(regex)]
+📢 console.log(array)
+✅ ---> Result:
+    [
+        [
+            'Apple',
+            'Apple',
+            index: 0,
+            input: 'Apple, Banana, Kiwi, Apple, Orange, etc. etc. etc.',
+            groups: undefined
+        ],
+        [
+            'Apple',
+            'Apple',
+            index: 21,
+            input: 'Apple, Banana, Kiwi, Apple, Orange, etc. etc. etc.',
+            groups: undefined
+        ]
+    ]
+```
