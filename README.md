@@ -1,7 +1,7 @@
 **Table of Content**
 
-# Scope (Alcance de una variable) [scope link](https://github.com/lonperman/Curso-EcmaScript#1%EF%B8%8F%E2%83%A3-scope-alcance-de-una-variable)
-# Arrow Functions (Funciones Flecha)[Arrow link](https://github.com/lonperman/Curso-EcmaScript#2%EF%B8%8F%E2%83%A3-arrow-functions-funciones-flecha)
+# Scope (Alcance de una variable) [scope link](https://github.com/lonperman/Curso-EcmaScript#1%EF%B8%8F%E2%83%A3-scope-alcance-de-una-variable "Scope")
+# Arrow Functions (Funciones Flecha)[Arrow link](https://github.com/lonperman/Curso-EcmaScript#2%EF%B8%8F%E2%83%A3-arrow-functions-funciones-flecha "Arrow Functions")
 
 # ⚙ EcmaScript 6
 ## 1️⃣ Scope (Alcance de una variable)
