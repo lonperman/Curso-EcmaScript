@@ -9,7 +9,7 @@
 - ### [ Object-literals (Mejora a los objetos)](https://github.com/lonperman/Curso-EcmaScript#-object-literals-mejora-a-los-objetos-1)
 - ### [Promises (Algo que va a suceder o no).](https://github.com/lonperman/Curso-EcmaScript#-promises-algo-que-va-a-suceder-o-no)
 - ### [Clases (Diseño de clases - Utilizando herencia)](https://github.com/lonperman/Curso-EcmaScript#-clases-dise%C3%B1o-de-clases---utilizando-herencia)
-- ### [Module (exportar & importar funciones de diferentes archivos)](https://github.com/lonperman/Curso-EcmaScript#9%EF%B8%8F%E2%83%A3-module-exportar--importar-funciones-de-diferentes-archivos)
+- ### [Module (exportar & importar funciones de diferentes archivos)](https://github.com/lonperman/Curso-EcmaScript#-module-exportar--importar-funciones-de-diferentes-archivos)
 - ### [Generadores](https://github.com/lonperman/Curso-EcmaScript#-generadores)
 - ### [Set (estructura de datos para almacenar elementos únicos)](https://github.com/lonperman/Curso-EcmaScript#-set) 
 ## ⚙ EcmaScript 7
