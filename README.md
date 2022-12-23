@@ -1,8 +1,33 @@
-**Table of Content**
+# **Table of Content**
 
-# Scope (Alcance de una variable) [scope link](https://github.com/lonperman/Curso-EcmaScript#1%EF%B8%8F%E2%83%A3-scope-alcance-de-una-variable "Scope")
-# Arrow Functions (Funciones Flecha)[Arrow link](https://github.com/lonperman/Curso-EcmaScript#2%EF%B8%8F%E2%83%A3-arrow-functions-funciones-flecha "Arrow Functions")
+## EcmaScript 6
+- ### [Scope (Alcance de una variable)](https://github.com/lonperman/Curso-EcmaScript#1%EF%B8%8F%E2%83%A3-scope-alcance-de-una-variable)
+- ### [Arrow Functions](https://github.com/lonperman/Curso-EcmaScript#2%EF%B8%8F%E2%83%A3-arrow-functions-funciones-flecha)
+- ### [Template Literals (Uso de strings y variables)](https://github.com/lonperman/Curso-EcmaScript#3%EF%B8%8F%E2%83%A3-template-literals-uso-de-strings-y-variables)
+- ### [Default-params. (Definicion de parametros con valor por defecto)](https://github.com/lonperman/Curso-EcmaScript#4%EF%B8%8F%E2%83%A3-default-params-definicion-de-parametros-con-valor-por-defecto)
+- ### [Destructuring, Spread operator, Rest-params.](https://github.com/lonperman/Curso-EcmaScript#5%EF%B8%8F%E2%83%A3-destructuring-spread-operator-rest-paramsdestructurar-arreglos-y-objetospropagar-la-informacion)
+- ### [ Object-literals (Mejora a los objetos)](https://github.com/lonperman/Curso-EcmaScript#6%EF%B8%8F%E2%83%A3-object-literals-mejora-a-los-objetos)
+- ### [Promises (Algo que va a suceder o no).](https://github.com/lonperman/Curso-EcmaScript#7%EF%B8%8F%E2%83%A3-promises-algo-que-va-a-suceder-o-no)
+- ### [Clases (Diseño de clases - Utilizando herencia)](https://github.com/lonperman/Curso-EcmaScript#8%EF%B8%8F%E2%83%A3-clases-dise%C3%B1o-de-clases---utilizando-herencia)
+- ### [Module (exportar & importar funciones de diferentes archivos)](https://github.com/lonperman/Curso-EcmaScript#9%EF%B8%8F%E2%83%A3-module-exportar--importar-funciones-de-diferentes-archivos)
+- ### [Generadores](https://github.com/lonperman/Curso-EcmaScript#-generadores)
+- ### [Set (estructura de datos para almacenar elementos únicos)](https://github.com/lonperman/Curso-EcmaScript#1%EF%B8%8F%E2%83%A31%EF%B8%8F%E2%83%A3-set) 
+## EcmaScript 7
+- ### [Exponential](https://github.com/lonperman/Curso-EcmaScript#1%EF%B8%8F%E2%83%A32%EF%B8%8F%E2%83%A3-exponential) 
+- ### [Includes](https://github.com/lonperman/Curso-EcmaScript#1%EF%B8%8F%E2%83%A33%EF%B8%8F%E2%83%A3-includes)
+## EcmaScript 8
+- ### [Object-entries](https://github.com/lonperman/Curso-EcmaScript#-object-entries)
+- ### [Object-values](https://github.com/lonperman/Curso-EcmaScript#-object-values)
+- ### [Object-keys](https://github.com/lonperman/Curso-EcmaScript#-object-keys)
+- ### [String padding](https://github.com/lonperman/Curso-EcmaScript#-string-padding)
+- ### [Trailing commas](https://github.com/lonperman/Curso-EcmaScript#-trailing-commas)
+- ### [Funciones asíncronas](https://github.com/lonperman/Curso-EcmaScript#-funciones-as%C3%ADncronas)
+# EcmaScript 9
+- ### [Expresiones regulares](https://github.com/lonperman/Curso-EcmaScript#-expresiones-regulares)
+- ### [Método finally en promesas](https://github.com/lonperman/Curso-EcmaScript#-m%C3%A9todo-finally-en-promesas)
+- ### [Generadores asíncronos](https://github.com/lonperman/Curso-EcmaScript#-generadores-as%C3%ADncronos)
 
+--------------------
 # ⚙ EcmaScript 6
 ## 1️⃣ Scope (Alcance de una variable)
    > Las formas de definir una variable en JavaScript como lo son var, let y const, tienen presente un respectivo alcance por lo cual se debe tener presente al momento de ser definidas en el desarrollo de un proyecto.
